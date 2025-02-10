@@ -1,0 +1,294 @@
+/* Reset default margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    height: 100%;
+}
+
+/* Hide scrollbar in Chrome, Safari, and Edge */
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll-Snap Container */
+.scroll-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Keeps snap scrolling enabled */
+    scrollbar-width: none;
+    position: relative;
+    height: 100vh;
+    overscroll-behavior-y: contain;
+    width: 100vw;
+    scroll-padding-top: 1px; /* Prevents abrupt snapping */
+}
+
+/* Individual Scroll Items */
+.scroll-item {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start; /* Ensures each section snaps correctly */
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.7s ease-out; /* Creates a smooth movement into place */
+}
+.scroll-container {
+    scroll-behavior: auto; /* Ensures smooth snapping only happens programmatically */
+    scroll-snap-stop: always; /* Forces snap scrolling */
+}
+
+/* Images */
+.scroll-item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+
+/* Hover zoom effect */
+.scroll-item img:hover {
+    transform: scale(1.02);
+}
+
+/* Product Text Overlay - Frosted Glass Effect */
+.product-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    width: 85%; /* Slightly wider for better text readability */
+    max-width: 600px;
+    backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease-in-out;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Hover effect to make text stand out */
+.product-text:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/* Product Title */
+.product-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+/* Product Description */
+.product-text p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Stylish "Shop Now" Button */
+.shop-now {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff0000, #ff3333);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.shop-now:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}
+
+/* Ensure the link inside the button stays styled */
+.shop-now a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 30px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Left Logo Section */
+.nav-left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+    flex: none;
+    position: relative;
+    padding-right: 20px;
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+/* Centered Navigation Links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 40px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    background: rgba(255, 0, 0, 0.1);
+    color: #ff0000;
+}
+
+/* Right Icons Section */
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+/* Icons */
+.icon {
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: brightness(0);
+}
+
+.icon:hover {
+    transform: scale(1.15);
+    filter: brightness(0) saturate(100%) invert(23%) sepia(100%) saturate(7414%) hue-rotate(359deg) brightness(101%) contrast(117%);
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* Circular Buttons */
+.nav-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+/* Button Hover Effect */
+.nav-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Adjust the icon size */
+.nav-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-text {
+        width: 90%;
+        padding: 15px;
+        backdrop-filter: blur(8px); /* Reduce blur effect on smaller screens */
+    }
+
+    .product-text h2 {
+        font-size: 28px;
+    }
+
+    .product-text p {
+        font-size: 16px;
+    }
+}

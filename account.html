@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - MokeSell</title>
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav class="top-nav">
+            <a href="index.html">
+                <img src="images/logo-no-background.png" alt="MokeSell Logo" class="logo">
+            </a>
+        </nav>
+    </header>
+
+    <!-- Back Button -->
+    <a href="index.html" class="back-button">
+        <img src="images/back-arrow.png" alt="Back">
+    </a>
+
+    <div class="header-line"></div>
+
+    <!-- Account Creation Form -->
+    <div class="form-box">
+        <h1>Create an Account</h1>
+        <p class="description">Check your email for confirmation details.</p>
+
+        <form id="contact-form" method="POST">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Enter your full name" required>
+
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" name="email" placeholder="Enter a valid email" required>
+
+            <label for="contact-password">Password</label>
+            <input type="password" id="contact-password" name="password" placeholder="Enter a secure password" required>
+
+            <label for="contact-birthday">Birthday</label>
+            <input type="date" id="contact-birthday" name="birthday" required>
+
+            <label for="contact-postal">Postal Code</label>
+            <input type="text" id="contact-postal" name="postal_code" placeholder="Enter your postal code" required>
+
+            <!-- Gender Selection -->
+            <label>Gender</label>
+            <div class="gender-container">
+                <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female"> Female</label>
+                <label><input type="radio" name="gender" value="prefer-not"> Prefer Not To Say</label>
+            </div>
+
+            <hr>
+
+            <!-- Membership Agreement -->
+            <h3>Membership Agreement</h3>
+            <p>By creating an account, you agree to MokeSell's privacy policy and terms & conditions.</p>
+
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the TERMS & CONDITIONS and PRIVACY POLICY</label>
+            </div>
+
+            <div class="terms-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+
+            <!-- Register Button -->
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+    </div>
+
+    <script src="account.js"></script>
+</body>
+</html>

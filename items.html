@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="item.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header>
+        <nav class="top-nav">
+            <nav class="nav-left">
+                <img src="images/logo-no-background.png" alt="MokeSell Logo" class="logo">
+            </nav>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Clothing</a></li>
+                <li><a href="rich.html">Luxury Items</a></li>
+                <li><a href="gadget.html">Electronics</a></li>
+                <li><a href="product.html">All Products</a></li>
+            </ul>
+
+            <nav class="nav-icons">
+                <a href="likes.html">
+                    <i class="fas fa-heart"></i>
+                    <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="Wishlist" class="icon">
+                </a>
+                <a href="cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/833/833314.png" alt="Cart" class="icon">
+                </a>
+            </nav>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Product Gallery (Dynamic Images) -->
+        <section class="product-gallery">
+            <button class="slider-button prev" aria-label="Previous Image">&#10094;</button>
+            <section class="image-container">
+                <section class="image-slider" id="image-slider">
+                    <!-- Dynamic images will be inserted here -->
+                </section>
+            </section>
+            <button class="slider-button next" aria-label="Next Image">&#10095;</button>
+        </section>
+    
+        <section class="main-content">
+            <!-- Product Details -->
+            <section class="product-details">
+                <h1 id="product-name">Loading Product...</h1>
+                <p class="price" id="product-price"></p>
+
+                <section class="details" id="product-details">
+                    <!-- Dynamic Details will be inserted here -->
+                </section>
+
+                <section class="description" id="product-description">
+                    <!-- Dynamic Description -->
+                </section>
+
+                <section class="deal-method" id="deal-methods">
+                    <!-- Dynamic Deal Methods -->
+                </section>
+            </section>
+    
+            <!-- Seller Information -->
+            <section class="seller-info" id="seller-info">
+                <section class="seller-profile">
+                    <img src="images/seller-profile.png" alt="Seller Profile Picture" class="seller-pic" id="seller-pic">
+                    <p><strong id="seller-name">Seller Name</strong></p>
+                </section>
+                <button class="buy" id="buyButton">Buy</button>
+                <button class="offer">Make Offer</button>
+                <p class="returns"><strong>Returns:</strong> Depends on the seller.</p>
+                <p class="safety"><strong>Safety Policy:</strong> Pay only at meet-up.</p>
+            </section>
+        </section>
+    </main>
+    
+    <section class="similar-listings">
+        <h2>Similar Listings</h2>
+        <article class="listing">
+            <section class="seller-info">
+                <img src="images/seller-profile.png" alt="Seller Profile Picture" class="seller-pic">
+                <p class="seller">Seller Username</p>
+            </section>
+            <figure class="listing-image">
+                <img src="images/placeholder-product.png" alt="Product Image">
+            </figure>
+            <p class="product-name">Product Name</p>
+            <p class="product-price">S$XXX</p>
+            <p class="product-condition">Condition: New</p>
+        </article>
+    </section>
+
+    <section class="bottom-icons">
+        <a href="index.html">
+            <img src="images/home-icon.png" alt="Home">
+        </a>
+        <a href="search.html">
+            <img src="images/search-icon.png" alt="Search">
+        </a>
+        <a href="login.html">
+            <img src="images/user-icon.png" alt="Profile">
+        </a>
+    </section>
+
+    <button id="back-to-top" title="Go to top">&#8679;</button>
+    
+    <footer>
+        <section class="footer-section">
+            <h3>Profile Settings</h3>
+        </section>
+        <section class="footer-section">
+            <h3>Help</h3>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Return Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Accessibility</a></li>
+            </ul>
+        </section>
+        <section class="footer-section">
+            <h3>Account</h3>
+            <ul>
+                <li><a href="#">Membership</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Coupons</a></li>
+            </ul>
+        </section>
+        <section class="footer-section">
+            <h3>MokeSell Social Account</h3>
+            <figure class="social-icons"></figure>
+        </section>
+    </footer>
+    <p class="copyright">Copyright © MokeSell, Ltd. All rights reserved.</p>
+
+    <script src="items.js"></script>
+</body>
+</html>

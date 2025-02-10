@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MokeSell - All Products</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation -->
+    <header>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="images/logo-no-background.png" alt="MokeSell Logo" class="logo">
+                </a>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Clothing</a></li>
+                <li><a href="rich.html">Luxury Items</a></li>
+                <li><a href="gadget.html">Electronics</a></li>
+                <li><a href="product.html" class="active">All Products</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="likes.html" class="icon-link">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="cart.html" class="icon-link">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="products-container">
+        <!-- Filters Sidebar -->
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <label class="filter-option">
+                    <input type="checkbox"> Clothing
+                    <span class="count">(150)</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Electronics
+                    <span class="count">(89)</span>
+                </label>
+                <label class="filter-option">
+                    <input type="checkbox"> Luxury Items
+                    <span class="count">(45)</span>
+                </label>
+            </div>
+
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="price-slider">
+                    <input type="range" min="0" max="1000" value="500">
+                    <div class="price-inputs">
+                        <input type="number" placeholder="Min" min="0">
+                        <span>-</span>
+                        <input type="number" placeholder="Max" min="0">
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Products Grid Section -->
+        <section class="products-section">
+            <div class="products-header">
+                <h2>All Products</h2>
+                <div class="sort-options">
+                    <select>
+                        <option>Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Newest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product Cards -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="Fashion Product">
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Stylish Summer Dress</h3>
+                        <p class="price">$49.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(42)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- More product cards with different images -->
+                <!-- Electronics Product -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6" alt="Electronics Product">
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wireless Headphones</h3>
+                        <p class="price">$129.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(128)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </article>
+
+                <!-- Luxury Product -->
+                <article class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa" alt="Luxury Product">
+                        <button class="wishlist-btn">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Watch</h3>
+                        <p class="price">$299.99</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(89)</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-icon">
+            <i class="fas fa-home"></i>
+        </a>
+        <a href="search.html" class="nav-icon">
+            <i class="fas fa-search"></i>
+        </a>
+        <a href="login.html" class="nav-icon">
+            <i class="fas fa-user"></i>
+        </a>
+    </nav>
+</body>
+</html>

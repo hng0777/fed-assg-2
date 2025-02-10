@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <!-- Top Navigation -->
+    <header>
+        <nav class="top-nav">
+            <div class="nav-left">
+                <a href="index.html">
+                    <img src="images/logo-no-background.png" alt="MokeSell Logo" class="logo">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Back Button (Arrow Only) -->
+    <a href="index.html" class="back-button">
+    <img src="images/back-arrow.png" alt="Back">
+    </a>
+
+    <!-- Horizontal Line -->
+    <div class="header-line"></div>
+
+    <!-- Main Login Container -->
+    <div class="login-container">
+        <!-- Left: Login Section -->
+        <div class="login-section">
+            <h2>Login</h2>
+            <form>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter a valid email" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                
+                <div class="show-password">
+                    <input type="checkbox" id="show-password">
+                    <label for="show-password">Show my password</label>
+                </div>
+
+                <div class="links">  
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+                
+                <button type="submit">Log In</button>
+            </form>
+            
+            <div class="links">
+                <a href="#">Forgot your password?</a>
+            </div>
+        </div>
+
+        <!-- Right: Registration Section -->
+        <div class="register-section">
+            <h2>Create an Account</h2>
+            <p>If you create an account, it takes less time to go through checkout and complete your orders. Register today for free!</p>
+            <a href="account.html">
+                <button type="button">Create an Account</button>
+            </a>
+        </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        Copyright © MokeSell, Ltd. All rights reserved.
+    </div>
+
+</body>
+</html>

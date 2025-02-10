@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Page Title -->
+  <title>MokeSell - Shopping Cart</title>
+</head>
+<body>
+  <!-- Include common header -->
+  <header>
+    <nav class="top-nav">
+      <div class="nav-left">
+        <a href="index.html">
+          <img src="images/logo-no-background.png" alt="MokeSell Logo" class="logo">
+        </a>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">Clothing</a></li>
+        <li><a href="rich.html">Luxury Items</a></li>
+        <li><a href="gadget.html">Electronics</a></li>
+        <li><a href="product.html">All Products</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <a href="likes.html" class="icon-link">
+          <i class="fas fa-heart"></i>
+          <span class="icon-badge">0</span>
+        </a>
+        <a href="cart.html" class="icon-link active">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="icon-badge cart-count">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="cart-container">
+    <h1>Shopping Cart</h1>
+    
+    <div class="cart-content">
+      <div class="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+      </div>
+
+      <div class="cart-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-item">
+          <span>Subtotal</span>
+          <span class="subtotal">$0.00</span>
+        </div>
+        <div class="summary-item">
+          <span>Shipping</span>
+          <span class="shipping">$0.00</span>
+        </div>
+        <div class="summary-item">
+          <span>Tax</span>
+          <span class="tax">$0.00</span>
+        </div>
+        <div class="promo-code">
+          <input type="text" placeholder="Enter promo code">
+          <button class="btn btn-secondary apply-promo">Apply</button>
+        </div>
+        <div class="summary-total">
+          <span>Total</span>
+          <span class="total">$0.00</span>
+        </div>
+        <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+        <button class="btn btn-secondary continue-shopping">Continue Shopping</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2024 MokeSell</p>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="common.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>

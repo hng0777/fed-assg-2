@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    border-radius: 5px;
+}
+
+nav {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid black;
+}
+
+main {
+    display: flex;
+    width: 80%;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.photo-upload {
+    width: 50%;
+}
+
+fieldset {
+    width: 100%;
+    height: 350px;
+    text-align: center;
+    border: 2px solid gray;
+}
+
+#preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 10px;
+}
+
+#preview li {
+    width: 100px;
+    height: 100px;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+    padding: 20px;
+}
+
+.photo-grid li {
+    width: 80px;
+    height: 80px;
+    background: lightgray;
+}
+
+aside {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+section {
+    background: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+ul li {
+    background: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+input, textarea {
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background: #d32f2f;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #b71c1c;
+}

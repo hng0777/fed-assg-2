@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List an Item</title>
+    <link rel="stylesheet" href="sell.css">
+</head>
+<body>
+
+    <form id="sellForm">
+        <header>
+            <a href="index.html">
+                <img src="images/logo-no-background.png" alt="MokeSell Logo" class="logo">
+            </a>
+        </header>
+
+        <nav>
+            <h2>List an Item</h2>
+        </nav>
+
+        <main>
+            <section class="seller-info">
+                <h3>Seller Information</h3>
+                <input type="hidden" id="sellerName" name="seller_name">
+                <input type="hidden" id="sellerEmail" name="seller_email">
+            </section>
+            
+            <section class="photo-upload">
+                <fieldset>
+                    <legend>Select Photos</legend>
+                    <p>Upload photos:</p>
+                    <input type="file" id="imageUpload" name="product_image" accept="image/*" multiple>
+                    <ul id="preview"></ul>
+                </fieldset>
+            </section>
+
+            <aside>
+                <section class="category">
+                    <h3>Category</h3>
+                    <label><input type="radio" name="category" value="Clothing"> Clothing</label>
+                    <label><input type="radio" name="category" value="Luxury Items"> Luxury Items</label>
+                    <label><input type="radio" name="category" value="Electronics"> Electronics</label>
+                </section>
+
+                <section class="condition">
+                    <h3>Condition</h3>
+                    <ul>
+                        <li><label><input type="radio" name="condition" value="Brand New"> Brand New</label></li>
+                        <li><label><input type="radio" name="condition" value="Like New"> Like New</label></li>
+                        <li><label><input type="radio" name="condition" value="Lightly Used"> Lightly Used</label></li>
+                        <li><label><input type="radio" name="condition" value="Well Used"> Well Used</label></li>
+                        <li><label><input type="radio" name="condition" value="Heavily Used"> Heavily Used</label></li>
+                    </ul>
+                </section>
+
+                <section class="item-details">
+                    <h3>Item Details</h3>
+                    <label>Listing Name <input type="text" name="listing_name" required></label>
+                    <label>Brand <input type="text" name="brand"></label>
+                    <label>Description (optional)
+                        <textarea name="description"></textarea>
+                    </label>
+                </section>
+
+                <section class="price">
+                    <h3>Price</h3>
+                    <label>Price ($) <input type="number" name="price" min="0" step="0.01" required></label>
+                </section>
+
+                <section class="deal-methods">
+                    <h3>Deal Methods</h3>
+                    <label><input type="checkbox" name="deal_method" value="Meet up"> Meet up</label>
+                    <label><input type="checkbox" name="deal_method" value="Delivery"> Delivery</label>
+                </section>
+            </aside>
+        </main>
+
+        <footer>
+            <button type="submit">List Now</button>
+        </footer>
+
+    </form>
+
+    <script src="sell.js"></script>
+
+</body>
+</html>
